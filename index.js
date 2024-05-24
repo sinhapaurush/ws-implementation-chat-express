@@ -20,7 +20,9 @@ let userCounter = 1;
 //   message: string;
 //   fromSelf: boolean;
 // };
-
+app.get("/", (req, res) => {
+  res.send("All good!");
+});
 io.on("connection", (socket) => {
   console.log(`${socket.id} Connected`);
   const thisUserId = userCounter;
